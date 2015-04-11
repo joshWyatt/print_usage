@@ -9,6 +9,7 @@ usage.md
 Usage: your_sweet_module [OPTIONS] COMMAND
 ```
 
+index.js
 ``` js
 var printUsage = require('print_usage');
 printUsage()
