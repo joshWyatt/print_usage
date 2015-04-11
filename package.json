@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/joshWyatt/print_usage.git"
   },
+  "scripts": {
+    "test": "node test.config.js test/*.js | faucet"
+  },
   "keywords": [
     "usage"
   ],
@@ -19,7 +22,11 @@
     "url": "https://github.com/joshWyatt/print_usage/issues"
   },
   "homepage": "https://github.com/joshWyatt/print_usage",
-  "devDependencies": {},
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "pre-commit": "^1.0.6",
+    "tape": "^4.0.0"
+  },
   "dependencies": {
     "file-exists": "^0.1.1"
   }
