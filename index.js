@@ -16,6 +16,6 @@ function printUsage (usage) {
     });
   }
   else {
-    throw new Error('----> there is neither a usage string or usage.md file in the cwd!');
+    throw new Error('There is neither a usage string or usage.md file in the cwd!');
   }
 }
