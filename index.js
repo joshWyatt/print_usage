@@ -8,7 +8,7 @@ function printUsage (usage) {
     console.log(usage);
     process.exit();
   }
-  if (fileExists(usage = process.cwd() + '/usage.md')) {
+  if (fileExists(usage = __dirname + '/usage.md')) {
     var rs = fs.createReadStream(usage);
     rs.pipe(process.stdout);
     rs.on('end', function() {
@@ -16,6 +16,6 @@ function printUsage (usage) {
     });
   }
   else {
-    throw new Error('There is neither a usage string or usage.md file in the cwd!');
+    throw new Error('There is neither a usage string or usage.md file');
   }
 }
