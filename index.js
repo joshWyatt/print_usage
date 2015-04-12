@@ -3,19 +3,14 @@ var fileExists = require('file-exists');
 
 module.exports = printUsage;
 
-function printUsage (usage) {
-  if (usage) {
-    console.log(usage);
-    process.exit();
-  }
-  if (fileExists(usage = __dirname + '/usage.md')) {
+function printUsage (pathToUsage) {
+  if (pathToUsage && fs.lstatSync(path_string).isFile()) {
     var rs = fs.createReadStream(usage);
     rs.pipe(process.stdout);
     rs.on('end', function() {
       process.exit();
     });
-  }
-  else {
-    throw new Error('There is neither a usage string or usage.md file');
+  } else {
+    throw new Error('Expected path to usage.md');
   }
 }
