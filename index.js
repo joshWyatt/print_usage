@@ -4,8 +4,8 @@ var fileExists = require('file-exists');
 module.exports = printUsage;
 
 function printUsage (pathToUsage) {
-  if (pathToUsage && fs.lstatSync(path_string).isFile()) {
-    var rs = fs.createReadStream(usage);
+  if (pathToUsage && fs.lstatSync(pathToUsage).isFile()) {
+    var rs = fs.createReadStream(pathToUsage);
     rs.pipe(process.stdout);
     rs.on('end', function() {
       process.exit();

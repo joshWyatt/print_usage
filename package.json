@@ -1,6 +1,6 @@
 {
   "name": "print_usage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Exit the program and print the usage from usage.md or a provided string.",
   "main": "index.js",
   "repository": {
